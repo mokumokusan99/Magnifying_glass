@@ -54,10 +54,10 @@
 
     <SeekBar
         android:id = "@+id/seekBar"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@+id/Button"
-        android:max = "100"
+        android:max = "1000"
         android:progress = "0"
         android:background="#B3DDDDDD"
         android:thumb="@drawable/baseline_zoom_in_24"

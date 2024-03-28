@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getscaledBitmap(bitmap: Bitmap): Bitmap{
         val seekBar = findViewById<SeekBar>(R.id.seekBar)
-        val scale = 1.0f + seekBar.progress / 200.0f // 拡大倍率
+        val scale = 1.0f + seekBar.progress / 1000.0f // 拡大倍率
         val width = bitmap.width * scale
         val height = bitmap.height * scale
         return Bitmap.createScaledBitmap(bitmap, width.toInt(), height.toInt(), true)
@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 // プレビュー画面を拡大する処理
-                val scale = 1.0f + progress / 200.0f // 拡大倍率
+                val scale = 1.0f + progress / 1000.0f // 拡大倍率
                 zoomInPreview(scale)
             }
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
